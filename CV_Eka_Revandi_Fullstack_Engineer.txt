@@ -1,0 +1,68 @@
+EKA REVANDI
+
+Web Developer | Fullstack Software Engineer | Informatics Engineering Student
+Tangerang, Indonesia | ekarevandii@gmail.com | +62 888 6340 076 | linkedin.com/in/caidenrev github.com/caidenrev | eka-revandi.vercel.app
+
+PROFESSIONAL SUMMARY
+
+Highly motivated 6th semester Informatics Engineering student transitioning to a Fullstack Software Engineer role. Proven expertise in the React/Next.js ecosystem and integrating Generative AI into highly functional SaaS applications. Successfully engineered and launched multiple AI powered platforms utilizing the Gemini API, Firebase, and Google Cloud to solve complex academic and professional challenges. Strong foundation in system prompting, cloud architecture, and building user centric web applications, complemented by technical community leadership experience.
+
+SKILLS
+
+? Frontend & UI/UX: Next.js, React.js, TypeScript, Tailwind CSS, Shadcn UI, Figma, Wireframing, User Research.
+? Backend & Cloud Architecture: AWS (EC2, S3, RDS, DynamoDB), Firebase (BaaS), Google Cloud Platform, RESTful APIs.
+? AI & Engineering: Generative AI Integration, System Prompt Engineering, SaaS Architecture.
+? Tools & Methodologies: Git/GitHub (Pull Requests), Notion, Agile Collaboration, Technical Advocacy.
+
+
+PROFESSIONAL & PROJECT EXPERIENCE
+
+Freelance Web/Fullstack Developer
+Fiverr (Independent Contractor)	Feb 2026 - Present
+? Developed and deployed full-stack web applications for international clients using the React/Next.js and TypeScript ecosystem.
+? Managed end to end project lifecycles, from requirement gathering and UI/UX wireframing in Figma to final deployment and maintenance.
+Cloud Architect Intern
+Amazon Web Services (AWS) Indonesia	Aug 2025 - Mar 2026
+? Designed and implemented scalable cloud infrastructure solutions, utilizing core AWS services including EC2, S3, RDS, and DynamoDB.
+? Collaborated on architecting secure and efficient cloud environments, ensuring high availability for web-based applications.
+Founder & Fullstack Software Engineer
+SaaS AI Ecosystem (Learniverse AI, Paper Verse, Hireverse)	Mar 2026 - Present
+? Architected and deployed a suite of AI powered SaaS web applications using Next.js and TypeScript, successfully serving 180+ active users with tools focused on academic optimization
+? Integrated Generative AI via Gemini API with customized system prompting to transform complex technical language into intuitive analogies, enhancing learning accessibility for non technical users.
+? Developed "Paper Verse," a high performance document generator capable of producing 170+ pages of cited academic content in minutes, overcoming standard LLM context limitations.
+
+Fullstack Web Developer
+National Google Student Ambassador (GSA) Portal	Mar - Apr 2026
+? Engineered a dedicated nationwide web portal for Google Student Ambassadors across Indonesia, centralizing member profiles and educational resources for 178+ elite student leaders.
+? Developed a content driven platform to disseminate AI focused educational materials, fostering a community of practice for students leveraging AI in research and brainstorming.
+EDUCATION
+Bachelor of Informatics Engineering (6th Semester)
+Universitas Pamulang | Tangerang, Indonesia	Expected Graduation: 2027
+? Relevant Coursework: Data Structures & Algorithms, Software Engineering, Cloud Computing, Web Programming, Database Management, Artificial Intelligence.
+
+ORGANIZATIONAL & LEADERSHIP EXPERIENCE
+
+Google Student Ambassador (GSA)
+Google Indonesia | Universitas Pamulang	Sep 2025 - Feb 2026
+
+? Acted as a strategic liaison between Google and the Indonesian academic community, bridging the gap between industry leading AI technology and campus wide adoption.
+? Spearheaded educational initiatives focused on Google AI (Gemini, NotebookLM), empowering students to utilize AI as a "research sword" and collaborative study companion for academic brainstorming.
+? Advocated for the ethical and productive use of AI, driving large scale impact by positioning technology as an essential tool for modern student research and productivity.
+
+CO Founder & Tech Mentor
+Pixel Society Rhythm | Universitas Pamulang	Aug 2024 - Nov 2025
+
+? Established an online IT learning community, facilitating mentoring sessions that translate complex programming logic into easy to understand analogies for over 67 members.
+? Led collaborative agile projects, fostering critical thinking and rapid adaptation to new technologies among informatics students.
+
+ACHIEVEMENT
+
+? Award of Excellence & Top 100 National GSA: Honored with the prestigious "Excellence Award" for outstanding contribution, and selected as an elite Top 100 delegate exclusively invited to Google Indonesia headquarters.
+? GSA 2025 Cohort Selection: Successfully admitted into the highly competitive program, chosen as one of only 800 accepted ambassadors from a nationwide pool of over 12,000+ applicants.
+
+CERTIFICATIONS
+
+? Google Career Certificates (Google UX Design)
+? College English Prep (University of North Texas)
+? Gemini Certified Educator (Google)
+? Google Student Ambassador Graduate 2025
