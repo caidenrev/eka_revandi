@@ -99,6 +99,14 @@ export default async function RootLayout({
                   document.documentElement.setAttribute('data-theme', 'dark');
                 }
               })();
+
+              // Image Protection
+              document.addEventListener('contextmenu', (e) => {
+                if (e.target.tagName === 'IMG') e.preventDefault();
+              });
+              document.addEventListener('dragstart', (e) => {
+                if (e.target.tagName === 'IMG') e.preventDefault();
+              });
             `,
           }}
         />

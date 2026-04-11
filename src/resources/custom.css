@@ -181,3 +181,14 @@
 /* Theme-aware logo classes for About Page */
 [data-theme='light'] .logo-dark-only { display: none !important; }
 [data-theme='dark'] .logo-light-only { display: none !important; }
+
+/* Image Protection */
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
