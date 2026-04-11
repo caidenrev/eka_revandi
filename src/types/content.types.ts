@@ -1,5 +1,5 @@
-import { IconName } from "@/resources/icons";
-import { zones } from "tzdata";
+import type { IconName } from "@/resources/icons";
+import type { zones } from "tzdata";
 
 /**
  * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').
@@ -146,11 +146,56 @@ export interface About extends BasePageConfig {
     experiences: Array<{
       /** Company name */
       company: string;
+      /** Path to company logo */
+      logo?: string;
+      /** Custom logo width */
+      logoWidth?: number;
+      /** Custom logo height */
+      logoHeight?: number;
+      /** Path to company logo for dark mode */
+      logoDark?: string;
       /** Timeframe of employment */
       timeframe: string;
       /** Role or job title */
       role: string;
       /** Achievements at the company */
+      achievements: React.ReactNode[];
+      /** Images related to the experience */
+      images?: Array<{
+        /** Image source path */
+        src: string;
+        /** Image alt text */
+        alt: string;
+        /** Image width ratio */
+        width: number;
+        /** Image height ratio */
+        height: number;
+      }>;
+    }>;
+  };
+  /** Leadership & Organizations section */
+  leadership: {
+    /** Whether to display leadership section */
+    display: boolean;
+    /** Title for the leadership section */
+    title: string;
+    /** List of leadership experiences */
+    experiences: Array<{
+      /** Organization name */
+      company: string;
+      /** Path to organization logo */
+      logo?: string;
+      /** Custom logo width */
+      logoWidth?: number;
+      /** Custom logo height */
+      logoHeight?: number;
+      /** Path to organization logo for dark mode */
+      logoDark?: string;
+      /** Timeframe of involvement */
+      timeframe: string;
+      /** Role or title */
+      role: string;
+      /** Achievements or impact */
       achievements: React.ReactNode[];
       /** Images related to the experience */
       images?: Array<{
@@ -215,19 +260,51 @@ export interface About extends BasePageConfig {
  * Blog page configuration.
  * @description Configuration for the Blog page, including metadata and navigation label.
  */
-export interface Blog extends BasePageConfig {}
+export interface Blog extends BasePageConfig {
+  /** Headline for the blog page */
+  headline: React.ReactNode;
+  /** Subline for the blog page */
+  subline: React.ReactNode;
+  /** Featured badge for the blog page */
+  featured: {
+    display: boolean;
+    title: React.ReactNode;
+    href: string;
+  };
+}
 
 /**
  * Work/projects page configuration.
  * @description Configuration for the Work/Projects page, including metadata and navigation label.
  */
-export interface Work extends BasePageConfig {}
+export interface Work extends BasePageConfig {
+  /** Headline for the work page */
+  headline: React.ReactNode;
+  /** Subline for the work page */
+  subline: React.ReactNode;
+  /** Featured badge for the work page */
+  featured: {
+    display: boolean;
+    title: React.ReactNode;
+    href: string;
+  };
+}
 
 /**
  * Gallery page configuration.
  * @description Configuration for the Gallery page, including metadata, navigation label, and image list.
  */
 export interface Gallery extends BasePageConfig {
+  /** Headline for the gallery page */
+  headline: React.ReactNode;
+  /** Subline for the gallery page */
+  subline: React.ReactNode;
+  /** Featured badge for the gallery page */
+  featured: {
+    display: boolean;
+    title: React.ReactNode;
+    href: string;
+  };
   /** List of images in the gallery */
   images: Array<{
     /** Image source path */

@@ -26,7 +26,7 @@ Amazon Web Services (AWS) Indonesia	Aug 2025 - Mar 2026
 ? Designed and implemented scalable cloud infrastructure solutions, utilizing core AWS services including EC2, S3, RDS, and DynamoDB.
 ? Collaborated on architecting secure and efficient cloud environments, ensuring high availability for web-based applications.
 Founder & Fullstack Software Engineer
-SaaS AI Ecosystem (Learniverse AI, Paper Verse, Hireverse)	Mar 2026 - Present
+Verse AI (Learniverse AI, Paper Verse, Hireverse)	Mar 2026 - Present
 ? Architected and deployed a suite of AI powered SaaS web applications using Next.js and TypeScript, successfully serving 180+ active users with tools focused on academic optimization
 ? Integrated Generative AI via Gemini API with customized system prompting to transform complex technical language into intuitive analogies, enhancing learning accessibility for non technical users.
 ? Developed "Paper Verse," a high performance document generator capable of producing 170+ pages of cited academic content in minutes, overcoming standard LLM context limitations.

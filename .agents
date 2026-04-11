@@ -1,10 +1,10 @@
-# Once UI Development Rules
+# Verse AI Development Rules
 
 ## Core Philosophy
-- You are a Design Engineer. We use Once UI for its semantic layout engine and design tokens.
+- You are a Design Engineer. We use Verse AI for its semantic layout engine and design tokens.
 - Priority 1: Semantic clarity. Use high-level atoms to build layouts and set styles (<Column>, <Row>, <Grid>, <Heading>, <Text>).
-- Priority 2: Token consistency. Never use hex codes; Use Once UI props whenever possible. If you need additional customization, use inline styles.
-- Priotity 3: Always scan for possible components. Once UI provides many generic, flexible and customizable components. The ones you need to create are mostly product-specific ones. Create them in a single folder with a barrel export in an index.ts file. The components should be built from Once UI primitives. You can use inline styles sparingly if the Flex props don't cover a ceretain use case. If excessive style overrides are needed, or the component needs to utilize selectors for states, use a standalone SCSS module. Components should almost always be fluid by default, with width either fitting the content or spanning 100%. Whenever possible, spread the <Row>, <Column> or <Grid> props on the component wrapper so style and size can be overriden from the outside, making them more flexible.
+- Priority 2: Token consistency. Never use hex codes; Use Verse AI props whenever possible. If you need additional customization, use inline styles.
+- Priotity 3: Always scan for possible components. Verse AI provides many generic, flexible and customizable components. The ones you need to create are mostly product-specific ones. Create them in a single folder with a barrel export in an index.ts file. The components should be built from Verse AI primitives. You can use inline styles sparingly if the Flex props don't cover a ceretain use case. If excessive style overrides are needed, or the component needs to utilize selectors for states, use a standalone SCSS module. Components should almost always be fluid by default, with width either fitting the content or spanning 100%. Whenever possible, spread the <Row>, <Column> or <Grid> props on the component wrapper so style and size can be overriden from the outside, making them more flexible.
 - Priority 4: No "Utility Noise". Avoid Tailwind classes and tools that are not part of the project already.
 
 ## Component & Layout Rules
@@ -22,10 +22,10 @@
 - Always ensure components are accessible (ARIA labels, semantic tags). Use `tooltip` for <IconButtons> when the action is not necessary or using several buttons in a group.
 
 ## Design & Style
-- Once UI has a unique, minimal aeshetics. It can vary based on project and implementation, but it always puts an emphasis on scale, contrast, clarity and proportions.
+- Verse AI has a unique, minimal aeshetics. It can vary based on project and implementation, but it always puts an emphasis on scale, contrast, clarity and proportions.
 - Build hierarchy by grouping elements and carefully setting appropriate spacings: the amount of the spacing should be relative to the size of the elements.
-- Once UI is a dark-mode first system that stands for extremely high quality. Think of Vercel, Linear and Raycast.
-- The general style of Once UI is grounded, simple, performant. Motion is usually provided by atomic components for interactions and states rather than distruptive, layout-shifting, unnecessary animations.
+- Verse AI is a dark-mode first system that stands for extremely high quality. Think of Vercel, Linear and Raycast.
+- The general style of Verse AI is grounded, simple, performant. Motion is usually provided by atomic components for interactions and states rather than distruptive, layout-shifting, unnecessary animations.
 
 ## Recommendations
 - The recommended size for <Button> and <IconButton> is `m`, only diverge when the UI is either spacious or very compact.

@@ -11,6 +11,7 @@ import {
   Meta,
   Schema,
   Row,
+  Flex,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -38,6 +39,11 @@ export default function About() {
       title: about.work.title,
       display: about.work.display,
       items: about.work.experiences.map((experience) => experience.company),
+    },
+    {
+      title: about.leadership.title,
+      display: about.leadership.display,
+      items: about.leadership.experiences.map((experience) => experience.company),
     },
     {
       title: about.studies.title,
@@ -204,6 +210,7 @@ export default function About() {
 
           {about.work.display && (
             <>
+              <Flex fillWidth borderTop="neutral-alpha-medium" style={{ borderTopWidth: '2px' }} marginTop="xl" marginBottom="xl" />
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
@@ -218,9 +225,49 @@ export default function About() {
                         {experience.timeframe}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                      {experience.role}
-                    </Text>
+                    <Row fillWidth horizontal="between" vertical="center" marginBottom="m">
+                      <Text variant="body-default-s" onBackground="brand-weak">
+                        {experience.role}
+                      </Text>
+                      {experience.logo && (
+                        <Flex
+                          className={experience.logoDark ? "logo-light-only" : ""}
+                          style={{
+                            height: `${experience.logoHeight || 40}px`,
+                            width: `${experience.logoWidth || 140}px`,
+                            flexShrink: 0,
+                            position: "relative",
+                            overflow: "visible",
+                          }}
+                        >
+                          <Media
+                            src={experience.logo}
+                            alt={experience.company}
+                            fill
+                            style={{ objectFit: "contain", objectPosition: "right" }}
+                          />
+                        </Flex>
+                      )}
+                      {experience.logoDark && (
+                        <Flex
+                          className="logo-dark-only"
+                          style={{
+                            height: `${experience.logoHeight || 40}px`,
+                            width: `${experience.logoWidth || 140}px`,
+                            flexShrink: 0,
+                            position: "relative",
+                            overflow: "visible",
+                          }}
+                        >
+                          <Media
+                            src={experience.logoDark}
+                            alt={experience.company}
+                            fill
+                            style={{ objectFit: "contain", objectPosition: "right" }}
+                          />
+                        </Flex>
+                      )}
+                    </Row>
                     <Column as="ul" gap="16">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
@@ -261,8 +308,86 @@ export default function About() {
             </>
           )}
 
+          {about.leadership.display && (
+            <>
+              <Flex fillWidth borderTop="neutral-alpha-medium" style={{ borderTopWidth: '2px' }} marginTop="xl" marginBottom="xl" />
+              <Heading as="h2" id={about.leadership.title} variant="display-strong-s" marginBottom="m">
+                {about.leadership.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.leadership.experiences.map((experience) => (
+                  <Column key={`${experience.company}-${experience.role}`} fillWidth>
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                      <Text id={experience.company} variant="heading-strong-l">
+                        {experience.company}
+                      </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {experience.timeframe}
+                      </Text>
+                    </Row>
+                    <Row fillWidth horizontal="between" vertical="center" marginBottom="m">
+                      <Text variant="body-default-s" onBackground="brand-weak">
+                        {experience.role}
+                      </Text>
+                      {experience.logo && (
+                        <Flex
+                          className={experience.logoDark ? "logo-light-only" : ""}
+                          style={{
+                            height: `${experience.logoHeight || 36}px`,
+                            width: `${experience.logoWidth || 120}px`,
+                            flexShrink: 0,
+                            position: "relative",
+                            overflow: "visible",
+                          }}
+                        >
+                          <Media
+                            src={experience.logo}
+                            alt={experience.company}
+                            fill
+                            style={{ objectFit: "contain", objectPosition: "right" }}
+                          />
+                        </Flex>
+                      )}
+                      {experience.logoDark && (
+                        <Flex
+                          className="logo-dark-only"
+                          style={{
+                            height: `${experience.logoHeight || 36}px`,
+                            width: `${experience.logoWidth || 120}px`,
+                            flexShrink: 0,
+                            position: "relative",
+                            overflow: "visible",
+                          }}
+                        >
+                          <Media
+                            src={experience.logoDark}
+                            alt={experience.company}
+                            fill
+                            style={{ objectFit: "contain", objectPosition: "right" }}
+                          />
+                        </Flex>
+                      )}
+                    </Row>
+                    <Column as="ul" gap="16">
+                      {experience.achievements.map((achievement: React.ReactNode) => (
+                        <Text
+                          as="li"
+                          variant="body-default-m"
+                          key={`${experience.company}-${achievement}`}
+                        >
+                          {achievement}
+                        </Text>
+                      ))}
+                    </Column>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
           {about.studies.display && (
             <>
+              <Flex fillWidth borderTop="neutral-alpha-medium" style={{ borderTopWidth: '2px' }} marginTop="xl" marginBottom="xl" />
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
@@ -283,6 +408,7 @@ export default function About() {
 
           {about.technical.display && (
             <>
+              <Flex fillWidth borderTop="neutral-alpha-medium" style={{ borderTopWidth: '2px' }} marginTop="xl" marginBottom="xl" />
               <Heading
                 as="h2"
                 id={about.technical.title}

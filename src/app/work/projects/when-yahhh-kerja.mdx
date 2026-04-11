@@ -1,0 +1,54 @@
+---
+title: "When Yahhh Kerja (Hireverse)"
+publishedAt: "2026-04-09"
+summary: "Platform pembuatan CV berbasis AI yang dirancang untuk mempermudah pencari kerja membuat CV profesional, ATS-friendly, dan berimpact tinggi."
+images:
+  - "/images/project-revan/when-yahhh-kerja.png"
+  - "/images/project-revan/learniverse.png"
+  - "/images/project-revan/paper-verse.png"
+---
+
+**When Yahhh Kerja** (juga dikenal sebagai **Hireverse**) adalah platform pembuatan CV berbasis AI yang dirancang khusus untuk mempermudah pencari kerja dalam membuat CV profesional, ATS-friendly, dan berimpact tinggi dalam hitungan menit.
+
+## Tujuan Aplikasi
+
+Aplikasi ini bertujuan untuk mendemokratisasi akses ke bimbingan karir berkualitas tinggi. Dengan memanfaatkan teknologi LLM (Large Language Model), aplikasi ini membantu pengguna mengoptimalkan deskripsi pengalaman kerja, ringkasan profesional, hingga menyesuaikan CV dengan kriteria lowongan kerja tertentu (Job Tailoring).
+
+## Fitur Utama
+
+- **AI CV Builder**: Buat CV dari nol dengan bantuan asisten AI yang memberikan saran konten secara real-time.
+- **AI CV Review**: Analisis CV Anda untuk mendapatkan skor, kekuatan, kelemahan, dan tips perbaikan instan.
+- **Job Tailoring**: Sesuaikan CV Anda secara otomatis berdasarkan deskripsi pekerjaan yang dilamar untuk meningkatkan kecocokan ATS.
+- **Cloud Sync (Real-time)**: Simpan progres pembuatan CV secara otomatis ke cloud.
+- **Multi-format Export**: Download CV dalam format PDF yang rapi atau file DOCX yang bisa diedit kembali.
+- **Secure Auth**: Login aman menggunakan Google Authentication melalui integrasi Firebase.
+- **Modern UI**: Desain antarmuka yang energetik dengan gaya "Sticker/Brutalist" yang unik dan responsif.
+
+## Arsitektur Sistem
+
+Aplikasi ini menggunakan arsitektur **Modern Serverless Web App**:
+
+### 1. Frontend Layer
+- **React 19**
+- **Vite**
+- **Tailwind CSS 4**
+- **Framer Motion**
+- **React Router 7**
+
+### 2. Service Layer (AI & Backend)
+- **Google Gemini API**
+- **Firebase Authentication**
+- **Firebase Firestore**
+- **Vercel Blob Storage**
+
+### 3. Export Engine
+- **jsPDF**: Rendering layout CV ke format PDF.
+- **docx**: Pembuatan dokumen Word secara dinamis.
+
+## Flow Sistem
+
+1. **Autentikasi**: Pengguna masuk menggunakan akun Google.
+2. **Dashboard**: Pengguna melihat daftar CV yang pernah dibuat (Real-time listener).
+3. **Editor**: Pengguna mengisi data dengan mekanisme auto-save (debounce).
+4. **Optimasi AI**: Klik tombol AI untuk optimasi bahasa ramah ATS via Gemini.
+5. **Review & Export**: Review skor CV atau unduh dalam format PDF/DOCX.

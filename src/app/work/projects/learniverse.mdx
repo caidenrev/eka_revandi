@@ -1,0 +1,67 @@
+---
+title: "Learniverse: Asisten Belajar Cerdas Bertenaga AI"
+publishedAt: "2026-04-11"
+summary: "Platform inovatif yang dirancang untuk memberdayakan siswa dan akademisi dengan seperangkat alat canggih berbasis kecerdasan buatan (AI)."
+images:
+  - "/images/project-revan/learniverse.png"
+  - "/images/project-revan/paper-verse.png"
+  - "/images/project-revan/when-yahhh-kerja.png"
+---
+
+Selamat datang di Learniverse, sebuah platform inovatif yang dirancang untuk memberdayakan siswa dan akademisi dengan seperangkat alat canggih berbasis kecerdasan buatan (AI). Misi kami adalah untuk mengatasi berbagai tantangan akademis, mempercepat proses belajar, dan membantu pengguna mencapai potensi penuh mereka.
+
+Aplikasi ini dibangun oleh **Revan (Eka Revandi)**, seorang Cloud Architect dan Software Engineer yang bersemangat dalam menggabungkan teknologi cloud dan AI untuk menciptakan solusi pendidikan yang transformatif.
+
+## Fitur Unggulan
+
+Learniverse dilengkapi dengan berbagai fitur cerdas yang dirancang khusus untuk mendukung berbagai kebutuhan akademis, mulai dari tahap awal pencarian ide hingga penyelesaian tugas akhir.
+
+### Katalisator Ide & Kreativitas
+
+- **Brainstorm Topik**: Menghasilkan ide sub-topik yang menarik dari sebuah tema umum.
+- **Kerangka Presentasi**: Mengubah judul menjadi kerangka slide yang logis dan terstruktur.
+- **Pencari Analogi**: Menyederhanakan konsep teknis yang rumit menjadi lebih mudah dipahami.
+- **Roadmap Belajar**: Membuat roadmap belajar terstruktur untuk menguasai keterampilan baru.
+- **Pembuat Pertanyaan**: Menghasilkan daftar pertanyaan dari materi pelajaran untuk kuis atau diskusi.
+
+### Asisten Riset & Penulisan
+
+- **Kerangka Penelitian**: Membuat draf kerangka skripsi atau tesis sesuai standar akademis.
+- **Pencari Referensi Cerdas**: Memberikan rekomendasi kata kunci alternatif untuk riset literatur.
+- **Parafrase Akademik**: Menyusun ulang kalimat untuk menghindari plagiarisme dengan tetap menjaga makna.
+- **Peringkas Jurnal & Dokumen**: Meringkas artikel atau dokumen (PDF/Word) ke dalam Bahasa Indonesia.
+- **Jawaban Cepat**: Mengunggah dokumen soal (PDF/JPG) dan membiarkan AI menjawabnya.
+
+### Asisten Profesional & Personal
+
+- **Tutor AI**: Bertanya jawab dengan AI berdasarkan konteks materi kuliah yang diunggah.
+- **CV Reviewer**: Mendapatkan ulasan, skor, dan saran perbaikan untuk CV dari AI yang bertindak sebagai HR.
+- **Code Review**: Menjalankan kode (JavaScript), dan jika terjadi error, AI akan menjelaskan masalah serta solusinya.
+
+## Tumpukan Teknologi (Tech Stack)
+
+Aplikasi ini dibangun di atas tumpukan teknologi modern yang berfokus pada kinerja, skalabilitas, dan pengalaman pengembang.
+
+- **Framework Utama**: **Next.js (App Router)** & **React**
+- **Bahasa**: **TypeScript**
+- **Styling**: **Tailwind CSS** & **Shadcn/UI**
+- **AI & Generative Layer**: **Google Genkit** & **Google Gemini (via Vertex AI)**
+- **Database**: **Cloud Firestore**
+- **Autentikasi**: **Firebase Authentication**
+- **Infrastruktur & Hosting**: **Firebase App Hosting**
+- **Gerbang Pembayaran**: **Midtrans**
+
+## Arsitektur Aplikasi
+
+Learniverse dirancang dengan **Arsitektur Aplikasi Web Serverless**. Arsitektur ini memanfaatkan layanan terkelola dari Google Cloud yang hanya aktif saat ada permintaan, membuatnya sangat efisien, skalabel, dan hemat biaya.
+
+### Penjelasan Alur Arsitektur
+
+1. **Hosting & Pengguna**: Aplikasi Next.js di-hosting menggunakan **Firebase App Hosting**.
+2. **Autentikasi**: Pengguna login melalui **Firebase Authentication**.
+3. **Eksekusi Fitur**: Pengguna berinteraksi dengan komponen React, memanggil **Next.js Server Action**.
+4. **Genkit Flows**: Server Action memanggil **Genkit Flow** untuk logika AI spesifik.
+5. **Panggilan Model AI**: Genkit Flow mengirimkan prompt ke model **Gemini** via **Vertex AI**.
+6. **Database**: Hasil disimpan atau diambil dari **Cloud Firestore**.
+
+Pola ini memastikan keamanan kunci API, skalabilitas tinggi, dan modularitas fitur.

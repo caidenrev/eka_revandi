@@ -1,0 +1,58 @@
+---
+title: "PaperVerse - Academic AI Assistant"
+publishedAt: "2026-04-10"
+summary: "Aplikasi berbasis web yang memanfaatkan teknologi Generative AI untuk membantu mahasiswa dan akademisi menyusun makalah ilmiah secara profesional."
+images:
+  - "/images/project-revan/paper-verse.png"
+  - "/images/project-revan/learniverse.png"
+  - "/images/project-revan/when-yahhh-kerja.png"
+---
+
+**PaperVerse** adalah aplikasi berbasis web yang memanfaatkan teknologi Generative AI untuk membantu mahasiswa dan akademisi dalam menyusun, mengembangkan, dan memformat makalah ilmiah secara profesional, cepat, dan terstruktur.
+
+## Fitur Utama
+
+- **AI-Powered Generation**: Menyusun seluruh struktur dan konten makalah (Bab, Sub-bab) secara otomatis menggunakan Google Gemini AI.
+- **Smart Assistant**: Chatbot pintar yang bisa diperintah untuk mengubah judul, menambah bab, atau merevisi konten secara langsung.
+- **Auto-Citation**: Manajemen sitasi otomatis dengan berbagai gaya (APA, MLA, Custom).
+- **Manual Editor "Word-like"**: Editor teks terintegrasi yang *seamless* untuk perbaikan manual kapan saja.
+- **Cloud Sync**: Penyimpanan otomatis ke Firebase Cloud (Firestore) agar data tidak hilang.
+- **Multi-Format Export**: Unduh hasil dalam format `.docx` (Microsoft Word) atau simpan langsung ke Google Docs.
+
+## Tech Stack
+
+### Frontend Application
+
+- **Language**: TypeScript
+- **Framework**: React.js (Vite)
+- **Styling**: Tailwind CSS
+- **Icons**: FontAwesome
+
+### Cloud & Backend Services
+
+- **Database**: Google Firebase Firestore (NoSQL)
+- **Authentication**: Google Firebase Auth
+- **AI Engine**: Google Gemini API (Model: `gemini-3-flash-preview` & `gemini-3-pro-preview`)
+- **Storage/Docs**: Google Drive API & Google Docs API
+
+### Libraries
+
+- `docx`: Untuk generasi file Word di sisi klien.
+- `react-toastify`: Notifikasi UI.
+- `file-saver`: Manajemen unduhan file.
+- `google-auth-library`: Autentikasi layanan Google.
+
+---
+
+## Architecture Overview
+
+Arsitektur PaperVerse menggunakan pendekatan **Serverless Client-Side Rendering**. Aplikasi React berjalan di browser pengguna dan berkomunikasi langsung dengan layanan cloud (Firebase & Google Cloud Platform) melalui API, tanpa backend server tradisional.
+
+## Application Flow
+
+Alur utama pengguna dari mulai membuka aplikasi hingga mendapatkan makalah jadi melibatkan:
+1. **Autentikasi**: Login melalui akun Google.
+2. **Dashboard**: Input detail paper (judul, subjek, dll).
+3. **AI Generation**: Proses pembuatan outline dan konten secara otomatis.
+4. **Editor & Assistant**: Review hasil, edit manual, atau minta bantuan AI Chatbot.
+5. **Export**: Unduh sebagai `.docx`, PDF, atau simpan ke Google Drive.

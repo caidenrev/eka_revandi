@@ -45,7 +45,17 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Informatics Engineering Student & Fullstack Software Engineer</>,
+  headline: (
+    <>
+      <Text as="span" variant="display-strong-xl" onBackground="brand-strong">
+        Eka Revandi
+      </Text>
+      <br />
+      <Text as="span" variant="display-default-xs" onBackground="neutral-weak">
+        Fullstack Software Engineer
+      </Text>
+    </>
+  ),
   featured: {
     display: true,
     title: (
@@ -57,7 +67,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/project-1",
+    href: "/work/learniverse",
   },
   subline: (
     <>
@@ -97,6 +107,9 @@ const about: About = {
     experiences: [
       {
         company: "Fiverr",
+        logo: "/images/about-logo/fiverr.png",
+        logoWidth: 120,
+        logoHeight: 36,
         timeframe: "Feb 2026 - Present",
         role: "Freelance Web/Fullstack Developer",
         achievements: [
@@ -107,6 +120,9 @@ const about: About = {
       },
       {
         company: "SaaS AI Ecosystem",
+        logo: "/images/about-logo/verse.ai.png",
+        logoWidth: 140,
+        logoHeight: 44,
         timeframe: "Mar 2026 - Present",
         role: "Founder & Fullstack Software Engineer",
         achievements: [
@@ -117,19 +133,19 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/saas-logo-revan/learniverse.png",
+            src: "/images/project-revan/learniverse.png",
             alt: "Learniverse AI",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/saas-logo-revan/paper-verse.png",
+            src: "/images/project-revan/paper-verse.png",
             alt: "Paper Verse",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/saas-logo-revan/when-yahhh-kerja.png",
+            src: "/images/project-revan/when-yahhh-kerja.png",
             alt: "When Yahhh Kerja",
             width: 16,
             height: 9,
@@ -138,21 +154,90 @@ const about: About = {
       },
       {
         company: "National Google Student Ambassador Portal",
+        logo: "/images/logo-home/logo-google.png",
+        logoWidth: 115,
+        logoHeight: 38,
         timeframe: "Mar - Apr 2026",
         role: "Fullstack Web Developer",
         achievements: [
           "Engineered a dedicated nationwide web portal for Google Student Ambassadors across Indonesia, centralizing member profiles and educational resources for 178+ elite student leaders.",
           "Developed a content driven platform to disseminate AI focused educational materials, fostering a community of practice for students leveraging AI in research and brainstorming.",
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/about-logo/PORTAL MEMBER.png",
+            alt: "Portal Member",
+            width: 16,
+            height: 9,
+          }
+        ],
       },
       {
         company: "Amazon Web Services (AWS) Indonesia",
+        logo: "/images/foto-revan-2/aws.png",
+        logoWidth: 120,
+        logoHeight: 52,
         timeframe: "Aug 2025 - Mar 2026",
         role: "Cloud Architect Intern",
         achievements: [
           "Designed and implemented scalable cloud infrastructure solutions, utilizing core AWS services including EC2, S3, RDS, and DynamoDB.",
           "Collaborated on architecting secure and efficient cloud environments, ensuring high availability for web-based applications.",
+        ],
+        images: [
+          {
+            src: "/images/foto-revan/foto-revan-7.jpeg",
+            alt: "Revan at AWS Infrastructure Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/foto-revan/foto-revan-9.png",
+            alt: "Revan AWS Cloud Solution",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/foto-revan/foto-revan-14.jpeg",
+            alt: "Revan AWS Team Collaboration",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/foto-revan/foto-revan.png",
+            alt: "Revan AWS Certification",
+            width: 16,
+            height: 9,
+          }
+        ],
+      },
+    ],
+  },
+  leadership: {
+    display: true,
+    title: "Leadership & Organizations",
+    experiences: [
+      {
+        company: "Google Student Ambassador (GSA)",
+        logo: "/images/logo-home/logo-google.png",
+        logoWidth: 115,
+        logoHeight: 38,
+        timeframe: "Sep 2025 - Feb 2026",
+        role: "Ambassador",
+        achievements: [
+          "Award of Excellence & Top 100 National GSA: Received the prestigious 'Excellence Award' for outstanding contribution and selected as an elite Top 100 delegate, earning an exclusive invitation to Google Indonesia headquarters.",
+          "Highly Competitive Selection: Successfully admitted into the GSA 2025 cohort, chosen as one of only 800 accepted ambassadors from a nationwide pool of over 12,000+ applicants.",
+          "Strategic AI Liaison: Spearheaded educational initiatives focused on Google AI (Gemini, NotebookLM), empowering students across the academic community to utilize AI for advanced research and productivity.",
+          "Ethical AI Advocacy: Promoted the productive and ethical use of technology, positioning AI as a collaborative study companion for modern Indonesian students.",
+        ],
+        images: [],
+      },
+      {
+        company: "Google Developer Groups (GDG) Jakarta",
+        timeframe: "2025 - Present",
+        role: "Member",
+        achievements: [
+          "Active member of the GDG Jakarta community, participating in technical workshops, developer conferences, and networking events focused on Google Cloud, Android, and Web technologies.",
+          "Engaged in knowledge sharing and community building with fellow developers in the Jakarta ecosystem.",
         ],
         images: [],
       },
@@ -211,6 +296,18 @@ const blog: Blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
+  featured: {
+    display: true,
+    title: "Sharing Knowledge",
+    href: "/about",
+  },
+  headline: <>Ideas, Stories & Tech Tidbits</>,
+  subline: (
+    <>
+      A collection of my thoughts on software development, life as an engineer, and the interesting
+      things I discover along the way.
+    </>
+  ),
 };
 
 const work: Work = {
@@ -218,6 +315,18 @@ const work: Work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
+  featured: {
+    display: true,
+    title: "Portfolio",
+    href: "/about",
+  },
+  headline: <>Crafting Digital Experiences</>,
+  subline: (
+    <>
+      A showcase of my recent projects, from full-stack web applications to AI-powered experimental
+      tools.
+    </>
+  ),
 };
 
 const gallery: Gallery = {
@@ -225,11 +334,33 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
+  featured: {
+    display: true,
+    title: "Bachelor of Informatics Engineering",
+    href: "/about",
+  },
+  headline: <>Visual Journey & Career Milestones</>,
+  subline: (
+    <>
+      Capturing the moments from my path in tech, leadership, and personal growth as a Fullstack
+      Engineer.
+    </>
+  ),
   images: [
-    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-4.jpg", alt: "image", orientation: "vertical" },
-    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/foto-revan/foto-revan.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-2.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-3.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-4.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-5.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-6.jpeg", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-7.jpeg", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-8.jpeg", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-9.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-10.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-11.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-12.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-14.jpeg", alt: "Eka Revandi Photo", orientation: "horizontal" },
+    { src: "/images/foto-revan/foto-revan-15.png", alt: "Eka Revandi Photo", orientation: "horizontal" },
   ],
 };
 

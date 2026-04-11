@@ -67,3 +67,117 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Premium Custom Scrollbar for GitHub Calendar */
+.custom-scrollbar {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(34, 211, 238, 0.3) transparent !important; /* Cyan low opacity */
+}
+
+/* Chrome, Edge, and Safari */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 4px !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 211, 238, 0.2) !important;
+    border-radius: 20px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 211, 238, 0.6) !important; /* Brighter cyan on hover */
+}
+
+/* Gallery Marquee Animations */
+@keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.marquee-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 16px;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    flex-shrink: 0;
+    gap: 16px;
+    min-width: 100%;
+}
+
+.marquee-left .marquee-track {
+    animation: marquee-left 40s linear infinite;
+}
+
+.marquee-right .marquee-track {
+    animation: marquee-right 40s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Ensure images maintain aspect ratio in marquee */
+.marquee-item {
+    height: 200px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: var(--radius-l);
+    border: 1px solid var(--neutral-alpha-weak);
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.marquee-item:hover {
+    border-color: var(--brand-solid-medium);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .marquee-item {
+        height: 140px;
+    }
+}
+
+/* Logo Marquee Styling */
+.logo-item {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    flex-shrink: 0;
+}
+
+.logo-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        height: 32px;
+        padding: 0 24px;
+    }
+}
+
+/* Theme-aware logo classes for About Page */
+[data-theme='light'] .logo-dark-only { display: none !important; }
+[data-theme='dark'] .logo-light-only { display: none !important; }
